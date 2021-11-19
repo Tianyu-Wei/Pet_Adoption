@@ -40,6 +40,4 @@ export class WishComponent implements OnInit {
       alert("wish Successfully!");
     })
   }
-
-
 }

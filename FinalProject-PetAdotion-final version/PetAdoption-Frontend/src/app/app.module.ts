@@ -65,8 +65,4 @@ import { PaypalComponent } from './paypal/paypal.component';
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-
-
-  
- }
+export class AppModule {}

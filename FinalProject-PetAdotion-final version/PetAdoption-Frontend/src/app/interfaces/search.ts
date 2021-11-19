@@ -8,6 +8,5 @@ export interface Search {
     age: string,
     gender: string,
     size: string,
-    attributes: string
-    
+    attributes: string  
 }

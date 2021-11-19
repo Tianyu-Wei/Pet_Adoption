@@ -18,6 +18,5 @@ export class AboutusComponent implements OnInit {
 
   goto(){
     window.location.href = "/donate/User/"+this.username;
-
   }
 }         

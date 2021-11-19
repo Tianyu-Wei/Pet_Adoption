@@ -13,9 +13,6 @@ import { PayendComponent } from './payend/payend.component'
 import { SearchResultComponent } from './search-result/search-result.component';
 import { SearchdetailComponent } from './searchdetail/searchdetail.component';
 
-
-
-
 const routes: Routes = [
 
   {path:'',redirectTo:'/login',pathMatch:'full'},
@@ -33,9 +30,6 @@ const routes: Routes = [
   {path:'details/:i/:test_type/:test_page/:token/:type/:username',component:SearchdetailComponent},
   { path: 'apply/:type/:username/:i', component: ApplyComponent},
   {path:'wishreview/:type/:username',component:ReviewWishListComponent}
-
-  // {path:'main', component:AppComponent}
-
 
 ];
 

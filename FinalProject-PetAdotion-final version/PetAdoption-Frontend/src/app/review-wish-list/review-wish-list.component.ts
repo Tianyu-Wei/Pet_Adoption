@@ -11,22 +11,21 @@ import { Observable } from 'rxjs';
 })
 export class ReviewWishListComponent implements OnInit {
 
-  @Input() wishs:Wish[];
-  @Input() username:string;
-@Input() type:string;
-wishService:WishService
-  // temp: any;
+  @Input() wishs: Wish[];
+  @Input() username: string;
+  @Input() type: string;
+  wishService: WishService
 
-  constructor(private route: ActivatedRoute,wishService:WishService) { 
+  constructor(private route: ActivatedRoute, wishService: WishService) {
     this.route.params.subscribe(params => {
-      this.type=params['type'];
-      this.username=params['username'];
-    }); 
-      this.wishService=wishService;
-      let wishs$: Observable<Array<Wish>> = this.wishService.getwishes();
-      wishs$.subscribe(wishs=> {
-        this.wishs= wishs;
-      })
+      this.type = params['type'];
+      this.username = params['username'];
+    });
+    this.wishService = wishService;
+    let wishs$: Observable<Array<Wish>> = this.wishService.getwishes();
+    wishs$.subscribe(wishs => {
+      this.wishs = wishs;
+    })
   }
   ngOnInit() {
   }

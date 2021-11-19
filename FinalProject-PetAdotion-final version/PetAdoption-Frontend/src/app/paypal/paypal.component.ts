@@ -1,8 +1,6 @@
 import { Component, AfterViewChecked } from '@angular/core';
-import { ActionSequence } from 'protractor';
 
 declare let paypal: any;
-
 
 @Component({
   selector: 'paypal',
@@ -61,13 +59,3 @@ export class PaypalComponent implements AfterViewChecked {
     })
   }
   }
-
-
-
-
-
-
-  // constructor() { }
-  // ngOnInit() {
-  // }
-

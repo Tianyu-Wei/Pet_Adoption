@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomerandompetComponent {
   images = [237, 1062, 169].map((n) => `https://picsum.photos/id/${n}/1600/900`);
- 
 
   constructor() { }
 

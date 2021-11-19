@@ -18,7 +18,6 @@ export class HomepageindexComponent implements OnInit {
       });
   }
 
-
   ngOnInit() {
   }
 

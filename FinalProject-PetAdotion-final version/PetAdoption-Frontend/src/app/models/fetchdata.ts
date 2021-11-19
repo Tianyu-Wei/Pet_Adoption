@@ -6,5 +6,4 @@ export class fetchdata{
     photos: any;
     status: string;
     contact: any;
-    
 }

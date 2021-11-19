@@ -18,13 +18,12 @@ export class SearchdetailComponent implements OnInit {
   resultArray: any;
   search_temp1: any;
   token: string;
-username:string;
-type:string;
+  username: string;
+  type: string;
   constructor(private route: ActivatedRoute, private fetchdataservice: FetchDataService) {
-   this.detail();
-
-   this.searchData();
-     }
+    this.detail();
+    this.searchData();
+  }
 
   ngOnInit() {
 
@@ -32,33 +31,20 @@ type:string;
 
   detail() {
     this.route.params.subscribe(params => {
-    this.id = params['i'];
-    this.test_page = params['test_page'];
-    this.test_type = params['test_type'];
-    this.token = params['token'];
-    this.username=params['username'];
-    this.type=params['type'];
+      this.id = params['i'];
+      this.test_page = params['test_page'];
+      this.test_type = params['test_type'];
+      this.token = params['token'];
+      this.username = params['username'];
+      this.type = params['type'];
     });
-
-
-    // console.log(this.id);
-    // console.log(this.test_page);
-    // console.log(this.test_type);
   }
 
   searchData() {
     console.log(this.token);
-      let animals$: Observable<Array<fetchdata>> = this.fetchdataservice.getDataService(this.token, this.test_type, this.test_page);
-      animals$.subscribe(animals => {
-        this.search_temp1 = animals['animals'];
-        // console.log(this.search_temp1[this.id].id);
-      });
-        
-
-
-      
+    let animals$: Observable<Array<fetchdata>> = this.fetchdataservice.getDataService(this.token, this.test_type, this.test_page);
+    animals$.subscribe(animals => {
+      this.search_temp1 = animals['animals'];
+    });
   }
-
-
-
 }

@@ -8,7 +8,6 @@ exports.search = function (params) {
     return promise;
 };
 
-
 exports.get = function (userName) {
     const promise = Admin.findOne({username:userName}).exec();
     return promise
@@ -18,5 +17,3 @@ exports.save = function (admin) {
     const promise = newAdmin.save();
     return promise;
 };
-
-

@@ -38,17 +38,6 @@ exports.get = function (userName) {
 };
 
 /**
- * Updates and returns the wish object.
- *
-//  * @param {Object} wish {wish object}
-//  */
-// exports.update = function (wish) {
-//     wish.modified_date = new Date();
-//     const promise = Wish.findOneAndUpdate({_id: wish._id}, wish).exec();
-//     return promise;
-// };
-
-/**
  * Deletes the wish object matching the id.
  *
  * @param {string} wishID {Id of the wish object}

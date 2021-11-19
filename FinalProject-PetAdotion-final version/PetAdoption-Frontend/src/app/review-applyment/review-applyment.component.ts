@@ -1,6 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Apply } from '../models/apply';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { ApplyService } from '../services/apply.service';
@@ -11,22 +10,21 @@ import { ApplyService } from '../services/apply.service';
   styleUrls: ['./review-applyment.component.scss']
 })
 export class ReviewApplymentComponent implements OnInit {
-  @Input() applys:Apply[];
-  @Input() username:string;
-@Input() type:string;
-applyService:ApplyService
-  // temp: any;
+  @Input() applys: Apply[];
+  @Input() username: string;
+  @Input() type: string;
+  applyService: ApplyService
 
-  constructor(private route: ActivatedRoute,applyService:ApplyService) { 
+  constructor(private route: ActivatedRoute, applyService: ApplyService) {
     this.route.params.subscribe(params => {
-      this.type=params['type'];
-      this.username=params['username'];
-    }); 
-      this.applyService=applyService;
-      let applys$: Observable<Array<Apply>> = this.applyService.getApplys();
-      applys$.subscribe(applys=> {
-        this.applys= applys;
-      })
+      this.type = params['type'];
+      this.username = params['username'];
+    });
+    this.applyService = applyService;
+    let applys$: Observable<Array<Apply>> = this.applyService.getApplys();
+    applys$.subscribe(applys => {
+      this.applys = applys;
+    })
   }
   ngOnInit() {
 

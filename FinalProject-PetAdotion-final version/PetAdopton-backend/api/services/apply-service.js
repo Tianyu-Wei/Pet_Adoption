@@ -38,17 +38,6 @@ exports.get = function (userName) {
 };
 
 /**
- * Updates and returns the todo object.
- *
- * @param {Object} sticky {todo object}
- */
-/*exports.update = function (todo) {
-    todo.modified_date = new Date();
-    const promise = Todo.findOneAndUpdate({_id: todo._id}, todo).exec();
-    return promise;
-};*/
-
-/**
  * Deletes the todo object matching the id.
  
  * @param {string} stickyId {Id of the todo object}

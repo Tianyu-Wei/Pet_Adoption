@@ -58,24 +58,6 @@ exports.get = function (request, response) {
 };
 
 /**
- * Updates and returns a wish object in JSON.
- *
- * @param {request} {HTTP request object}
- * @param {response} {HTTP response object}
- */
-// exports.put = function (request, response) {
-//     const wish = Object.assign({}, request.body);
-//     const resolve = (wish) => {
-//         response.status(200);
-//         response.json(wish);
-//     };
-//     wish._id = request.params.username;
-//     wishService.update(wish)
-//         .then(resolve)
-//         .catch(renderErrorResponse(response));
-// };
-
-/**
  * Deletes a Wish object.
  *
  * @param {request} {HTTP request object}

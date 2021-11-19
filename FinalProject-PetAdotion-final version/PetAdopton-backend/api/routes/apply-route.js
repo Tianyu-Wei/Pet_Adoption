@@ -13,6 +13,5 @@ module.exports = function (app) {
     // todo Routes for get, update and delete.
     app.route('/applys/:userName')
         .get(applyController.get)
-        //.put(applyController.put)
         .delete(applyController.delete);
 };

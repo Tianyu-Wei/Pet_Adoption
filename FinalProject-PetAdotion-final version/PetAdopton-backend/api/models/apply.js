@@ -7,40 +7,31 @@ const Schema = mongoose.Schema;
  */
 let ApplySchema = new Schema({
     username:{
-        type: String,
-        // required: "username is required!",
+        type: String
     },
     firstName: {
-        type: String,
-        // required: "FirstName is required!",
+        type: String
     },
     lastName: {
-        type: String,
-        // required: "LastName is required!",
+        type: String
     },
     email: {
-        type: String,
-        // required: "Email is required!",
+        type: String
     },
     phone: {
-        type: String,
-        // required: "Phone is required!",
+        type: String
     },
     address:{
-        type:String,
-        // required: "Address is required!",
+        type:String
     },
     zip: {
-        type: String,
-        // required: "Zip is required!",
+        type: String
     },
     city: {
-        type: String,
-        // required: "City is required!",
+        type: String
     },
     state: {
-        type: String,
-        // required: "State is required!",
+        type: String
     },
 }, {
     versionKey: false

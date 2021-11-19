@@ -8,16 +8,15 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AdminTopBarComponent implements OnInit {
   @Input() test_type: string;
-  @Input() username:string;
-  @Input() type:string;
-    constructor(private route:ActivatedRoute) { 
+  @Input() username: string;
+  @Input() type: string;
+  constructor(private route: ActivatedRoute) {
     this.route.params.subscribe(params => {
-      this.username=params['username'];
-      this.type=params['type'];
-      });
-    }
+      this.username = params['username'];
+      this.type = params['type'];
+    });
+  }
   ngOnInit() {
     this.test_type = '';
   }
-
 }

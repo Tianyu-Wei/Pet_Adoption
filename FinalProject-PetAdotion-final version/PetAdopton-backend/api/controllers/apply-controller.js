@@ -54,24 +54,6 @@ exports.get = function (request, response) {
 };
 
 /**
- * Updates and returns a todolist object in JSON.
- *
- * @param {request} {HTTP request object}
- * @param {response} {HTTP response object}
- */
-/*exports.put = function (request, response) {
-    const todo = Object.assign({}, request.body);
-    const resolve = (apply) => {
-        response.status(200);
-        response.json(apply);
-    };
-    apply.userName= request.params.userName;
-    todoService.update(todo)
-        .then(resolve)
-        .catch(renderErrorResponse(response));
-};*/
-
-/**
  * Deletes a todolist object.
  *
  * @param {request} {HTTP request object}
